@@ -7,13 +7,12 @@
     "email": "ross.pfahler@gmail.com"
   },
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "peerDependencies": {
-    "webpack": "1.3.1-beta8"
-  },
-  "dependencies": {
+    "webpack": "1.3.1-beta8",
     "webpack-core": "0.4.1"
   },
+  "dependencies": {},
   "devDependencies": {},
   "repository": "https://github.com/ross-pfahler/livefyreize-template-plugin",
   "scripts": {}
