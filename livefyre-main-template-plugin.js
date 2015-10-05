@@ -55,7 +55,7 @@ LivefyreMainTemplatePlugin.prototype.apply = function(mainTemplate) {
         if(typeof request === "object") request = request[type];
         if(Array.isArray(request)) {
           return "require(" + JSON.stringify(request[0]) + ")" + accessorToObjectAccess(request.slice(1));
-        } else 
+        } else
           return "require(" + JSON.stringify(request) + ")";
       }).join(", "));
     }
@@ -88,12 +88,12 @@ LivefyreMainTemplatePlugin.prototype.apply = function(mainTemplate) {
       (externalsArguments ?
       "   var a = typeof exports === 'object' ? factory(" + externalsRequireArray("commonjs") + ") : factory(" + externalsRootArray() + ");\n"
       :
-      "   var a = factory(); root.Livefyre || {};\n"
+      "   var a = factory();\nroot.Livefyre = root.Livefyre || {}\n"
       ) +
       "   if (typeof a == 'object') { \n" +
       "     for(var i in a) (typeof exports === 'object' ? exports : root.Livefyre)[i] = a[i];\n" +
       "   } else {\n" +
-      "     root.Livefyre = root.Livefyre || {}; root.Livefyre['" + chunk.name + "'] = a;\n" +
+      "     root.Livefyre['" + chunk.name + "'] = a;\n" +
       "   }\n" +
       " }\n"
       ) +

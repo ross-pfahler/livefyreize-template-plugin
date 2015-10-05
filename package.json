@@ -7,7 +7,7 @@
     "email": "ross.pfahler@gmail.com"
   },
   "private": false,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "peerDependencies": {
     "webpack": "1.x",
     "webpack-core": "0.x"
